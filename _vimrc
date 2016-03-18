@@ -48,6 +48,10 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 " less用のsyntaxハイライト
 NeoBundle 'KohPoll/vim-less'
 
+" VimShell
+NeoBundle 'Shougo/vimproc' " cd ~/.vim/bundle/vimproc.vim | make
+NeoBundle 'Shougo/vimshell'
+
 " 余談: neocompleteは合わなかった。ctrl+pで補完するのが便利
 
 call neobundle#end()
@@ -226,9 +230,9 @@ endif
 """"""""""""""""""""""""""""""
 " 自動的に閉じ括弧を入力
 """"""""""""""""""""""""""""""
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
+"imap { {}<LEFT>
+"imap [ []<LEFT>
+"imap ( ()<LEFT>
 """"""""""""""""""""""""""""""
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
