@@ -102,8 +102,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 
 augroup ftindent
   autocmd!
-  autocmd BufNewFile,BufRead *.css,*.js,*.jsx,*.rb,*.sh,*.go setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufRead *.html setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.html,*.css,*.js,*.jsx,*.rb,*.sh,*.go setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 augroup myXML
