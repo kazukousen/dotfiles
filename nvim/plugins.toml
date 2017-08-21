@@ -14,6 +14,9 @@ repo = 'Shougo/denite.nvim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+[[plugins]]
+repo = 'kassio/neoterm'
+
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'
 hook_add = '''

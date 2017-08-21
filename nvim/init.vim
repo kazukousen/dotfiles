@@ -38,6 +38,8 @@ endif
 
 inoremap <silent> jj <ESC>
 
+set sh=bash
+
 syntax on
 set t_Co=256
 set termguicolors
@@ -52,8 +54,12 @@ set clipboard+=unnamedplus
 
 tnoremap <silent> <ESC> <C-\><C-n>
 
+" NERDTreeの設定
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <silent><C-c> :closetab<CR>
+
+" ttでneoterm起動
+nnoremap tt :Tnew<CR><C-w>ja
 
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
@@ -99,6 +105,11 @@ inoremap {<Enter> {}<Left><CR><Esc><S-o>
 inoremap (<Enter> ()<Left><CR><Esc><S-o>
 inoremap [<Enter> []<Left><CR><Esc><S-o>
 nnoremap <Esc><Esc> :nohlsearch<CR>
+
+""""""""""""""""""""""""""""""
+" タブ切り替え
+""""""""""""""""""""""""""""""
+nnoremap <C-t> gt
 
 augroup ftindent
   autocmd!
