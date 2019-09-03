@@ -1,6 +1,13 @@
 
 # Mac
 
+- https://www.alfredapp.com
+- https://www.google.co.jp/chrome/
+- https://slack.com/intl/ja-jp/downloads/mac
+- https://www.dropbox.com/ja/install
+- https://code.visualstudio.com
+- https://hub.docker.com/editions/community/docker-ce-desktop-mac
+
 ```console
 $ mkdir ~/go/src/github.com/kazukousen/
 $ cd ~/go/src/github.com/kazukousen/
@@ -32,8 +39,6 @@ $ cp init.lua ~/.hammerspoon/init.lua
 
 ## VSCode
 
-https://code.visualstudio.com/
-
 ```console
 $ mkdir -p ~/Library/Application\ Support/Code/User/
 $ cp setting.json ~/Library/Application\ Support/Code/User/setting.json
@@ -49,4 +54,14 @@ $ brew install tig
 
 ```console
 $ cp _vimrc ~/.vimrc
+```
+
+## Google Cloud SDK
+
+```console
+$ tar -xzvf ~/Downloads/google-cloud-sdk-* -C ~/
+$ cd ~
+$ ./google-cloud-sdk/install.sh
+$ source ~/.bash_profile
+$ gcloud init
 ```
