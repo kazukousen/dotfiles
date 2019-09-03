@@ -44,3 +44,9 @@ $ cp setting.json ~/Library/Application\ Support/Code/User/setting.json
 ```console
 $ brew install tig
 ```
+
+## Vim
+
+```console
+$ cp _vimrc ~/.vimrc
+```
