@@ -1,0 +1,8 @@
+[user]
+    name = kazukousen
+    email = mmchari.0228@gmail.com
+[alias]
+    br = branch --sort=-authordate
+    ch = checkout
+    po = push origin
+    pof = push -f origin

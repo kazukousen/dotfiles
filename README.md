@@ -1,12 +1,14 @@
 
 # Mac
 
-- https://www.alfredapp.com
-- https://www.google.co.jp/chrome/
-- https://slack.com/intl/ja-jp/downloads/mac
-- https://www.dropbox.com/ja/install
-- https://code.visualstudio.com
-- https://hub.docker.com/editions/community/docker-ce-desktop-mac
+- Alfred https://www.alfredapp.com
+- Chrome https://www.google.co.jp/chrome/
+- Slack https://slack.com/intl/ja-jp/downloads/mac
+- DropBox https://www.dropbox.com/ja/install
+- VSCode https://code.visualstudio.com
+- Docker https://hub.docker.com/editions/community/docker-ce-desktop-mac
+- GoLand https://www.jetbrains.com/go/
+- Intellij IDEA https://www.jetbrains.com/idea/download/#section=mac
 
 ```console
 $ mkdir ~/go/src/github.com/kazukousen/
@@ -64,4 +66,10 @@ $ cd ~
 $ ./google-cloud-sdk/install.sh
 $ source ~/.bash_profile
 $ gcloud init
+```
+
+## Goland And Intellij IDEA
+
+```console
+$ cp .ideavimrc ~/.ideavimrc
 ```
