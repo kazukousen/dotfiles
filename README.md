@@ -11,7 +11,7 @@
 - Intellij IDEA https://www.jetbrains.com/idea/download/#section=mac
 
 ```console
-$ mkdir ~/go/src/github.com/kazukousen/
+$ mkdir -p ~/go/src/github.com/kazukousen/
 $ cd ~/go/src/github.com/kazukousen/
 $ git clone https://github.com/kazukousen/dotfiles.git
 $ cd dotfiles
