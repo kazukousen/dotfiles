@@ -43,7 +43,7 @@ $ cp init.lua ~/.hammerspoon/init.lua
 
 ```console
 $ mkdir -p ~/Library/Application\ Support/Code/User/
-$ cp setting.json ~/Library/Application\ Support/Code/User/setting.json
+$ cp setting.json ~/Library/Application\ Support/Code/User/settings.json
 ```
 
 ## tig
