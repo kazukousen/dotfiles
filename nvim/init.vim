@@ -22,6 +22,7 @@ set nowritebackup
 set conceallevel=0
 
 inoremap <silent> jj <ESC>
+tnoremap <silent> <C-n><C-n> <C-\><C-n>
 
 "dein Scripts-----------------------------
 
