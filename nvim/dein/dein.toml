@@ -1,0 +1,20 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+    set signcolumn=yes
+    set updatetime=1000
+'''
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+hook_add = '''
+  colorscheme onedark
+'''
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
