@@ -38,6 +38,9 @@ repo = 'Shougo/pum.vim'
 repo = 'Shougo/ddc.vim'
 depends = ['denops.vim', 'pum.vim']
 on_event = 'InsertEnter'
+hook_source = '''
+  source $HOME/go/src/github.com/kazukousen/dotfiles/nvim/dein/ddc.vim
+'''
 
 [[plugins]]
 repo = 'Shougo/ddc-around'
@@ -64,4 +67,11 @@ repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
 

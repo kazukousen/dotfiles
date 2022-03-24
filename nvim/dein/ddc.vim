@@ -21,7 +21,6 @@ call ddc#custom#patch_global('sourceOptions', {
  \   'isVolatile': v:true, 
  \   'forceCompletionPattern': '\S/\S*'
  \ }})
+
 call ddc#enable()
-inoremap <Tab> <Cmd>call pum#map#insert_relative(+1)<CR>
-inoremap <S-Tab> <Cmd>call pum#map#insert_relative(-1)<CR>
 
