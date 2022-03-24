@@ -5,8 +5,8 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-    set signcolumn=yes
-    set updatetime=1000
+    " set signcolumn=yes
+    set updatetime=100
 '''
 
 [[plugins]]
@@ -20,6 +20,13 @@ repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
+hook_add = '''
+    nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
+'''
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+depends = ['fern.vim']
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
@@ -28,24 +35,33 @@ repo = 'vim-denops/denops.vim'
 repo = 'Shougo/pum.vim'
 
 [[plugins]]
+repo = 'Shougo/ddc.vim'
+depends = ['denops.vim', 'pum.vim']
+on_event = 'InsertEnter'
+
+[[plugins]]
 repo = 'Shougo/ddc-around'
+on_source ='ddc.vim'
 
 [[plugins]]
 repo = 'LumaKernel/ddc-file'
+on_source ='ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
+on_source ='ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-sorter_rank'
+on_source ='ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-converter_remove_overlap'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
+on_source ='ddc.vim'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
 
