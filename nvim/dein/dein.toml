@@ -20,13 +20,21 @@ repo = 'sheerun/vim-polyglot'
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
+  nnoremap <C-n><C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 
-    nnoremap <C-n><C-n> :Fern . -reveal=% -drawer -toggle -width=30<CR>
+  " show hidden files
+  let g:fern#default_hidden=1
 '''
 
 [[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'
 depends = ['fern.vim']
+
+[[plugins]]
+repo = 'mattn/vim-sonictemplate'
+hook_add = '''
+  let g:sonictemplate_vim_template_dir = '$HOME/go/src/github.com/kazukousen/dotfiles/nvim/dein/sonictemplate'
+'''
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
