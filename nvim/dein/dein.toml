@@ -37,6 +37,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'ap/vim-buftabline'
+
+[[plugins]]
 repo = 'vim-denops/denops.vim'
 
 [[plugins]]

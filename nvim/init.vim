@@ -16,13 +16,15 @@ set title
 set backspace=indent,eol,start
 " set inccommand=split
 " set imdisable
-" set hidden
+set hidden
 set nobackup
 set nowritebackup
 set conceallevel=0
 
 inoremap <silent> jj <ESC>
 tnoremap <silent> <C-n><C-n> <C-\><C-n>
+nnoremap <silent> J :bprev<CR>
+nnoremap <silent> K :bnext<CR>
 
 "dein Scripts-----------------------------
 
