@@ -36,6 +36,7 @@ hook_add = '''
   let g:sonictemplate_vim_template_dir = '$HOME/go/src/github.com/kazukousen/dotfiles/nvim/dein/sonictemplate'
 '''
 
+# Show buffers like tab on top
 [[plugins]]
 repo = 'ap/vim-buftabline'
 
