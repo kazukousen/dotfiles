@@ -36,9 +36,33 @@ hook_add = '''
   let g:sonictemplate_vim_template_dir = '$HOME/go/src/github.com/kazukousen/dotfiles/nvim/dein/sonictemplate'
 '''
 
+# search
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = 0
+
+# depends ripgrep
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+    command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
+      \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
+
+  nnoremap <silent> <C-f><C-f> :Rg<CR>
+'''
+
 # Show buffers like tab on top
 [[plugins]]
 repo = 'ap/vim-buftabline'
+hook_add = '''
+  nnoremap <silent> J :bprev<CR>
+  nnoremap <silent> K :bnext<CR>
+  nnoremap <silent> <C-w><C-w> :bw<CR>
+'''
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'

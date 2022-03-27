@@ -55,7 +55,10 @@ $ brew install tig
 ## Vim
 
 ```console
-$ cp _vimrc ~/.vimrc
+brew update
+brew install neovim
+brew install deno
+brew install ripgrep
 ```
 
 ## Google Cloud SDK
