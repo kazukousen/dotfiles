@@ -20,7 +20,7 @@ repo = 'sheerun/vim-polyglot'
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
-  nnoremap <C-n><C-n> :Fern . -reveal=%<CR>
+  nnoremap <C-n> :Fern . -reveal=%<CR>
 
   " show hidden files
   let g:fern#default_hidden=1
@@ -52,7 +52,7 @@ hook_add = '''
       \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
 
-  nnoremap <silent> <C-f><C-f> :Rg<CR>
+  nnoremap <silent> <C-f> :Rg<CR>
 '''
 
 # Show buffers like tab on top
@@ -61,7 +61,7 @@ repo = 'ap/vim-buftabline'
 hook_add = '''
   nnoremap <silent> J :bprev<CR>
   nnoremap <silent> K :bnext<CR>
-  nnoremap <silent> <C-w><C-w> :bw<CR>
+  nnoremap <silent> <C-w> :bw<CR>
 '''
 
 [[plugins]]
