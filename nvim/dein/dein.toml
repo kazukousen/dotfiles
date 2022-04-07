@@ -1,6 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# show git-diff visualization on left-side
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -8,15 +9,19 @@ hook_add = '''
     set updatetime=100
 '''
 
+# colorscheme
+# :call dein#recache_runtimepath()
 [[plugins]]
 repo = 'joshdick/onedark.vim'
 hook_add = '''
   colorscheme onedark
 '''
 
+# code highlight
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 
+# filer
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
@@ -26,10 +31,12 @@ hook_add = '''
   let g:fern#default_hidden=1
 '''
 
+# fern + git visualization
 [[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'
 depends = ['fern.vim']
 
+# template/snipet
 [[plugins]]
 repo = 'mattn/vim-sonictemplate'
 hook_add = '''
@@ -55,7 +62,7 @@ hook_add = '''
   nnoremap <silent> <C-f> :Rg<CR>
 '''
 
-# Show buffers like tab on top
+# show buffers like tabs
 [[plugins]]
 repo = 'ap/vim-buftabline'
 hook_add = '''
