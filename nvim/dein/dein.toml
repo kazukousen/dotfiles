@@ -12,10 +12,16 @@ hook_add = '''
 # colorscheme
 # :call dein#recache_runtimepath()
 [[plugins]]
-repo = 'joshdick/onedark.vim'
+repo = 'junegunn/seoul256.vim'
 hook_add = '''
-  colorscheme onedark
+  colorscheme seoul256
+  set background=dark
 '''
+# [[plugins]]
+# repo = 'joshdick/onedark.vim'
+# hook_add = '''
+#   colorscheme onedark
+# '''
 
 # code highlight
 [[plugins]]
