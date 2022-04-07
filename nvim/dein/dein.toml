@@ -12,15 +12,22 @@ hook_add = '''
 # colorscheme
 # :call dein#recache_runtimepath()
 [[plugins]]
-repo = 'junegunn/seoul256.vim'
+repo = 'joshdick/onedark.vim'
 hook_add = '''
-  colorscheme seoul256
-  set background=dark
+  colorscheme onedark
 '''
 # [[plugins]]
-# repo = 'joshdick/onedark.vim'
+# repo = 'savq/melange'
 # hook_add = '''
-#   colorscheme onedark
+#   set termguicolors
+#   colorscheme melange
+# '''
+# [[plugins]]
+# repo = 'junegunn/seoul256.vim'
+# hook_add = '''
+#  let g:seoul256_background = 235
+#  colorscheme seoul256
+#  set background=dark
 # '''
 
 # code highlight
@@ -76,6 +83,8 @@ hook_add = '''
   nnoremap <silent> K :bnext<CR>
   nnoremap <silent> <C-w> :bw<CR>
 '''
+
+####################################
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
