@@ -9,7 +9,7 @@ set fileformats=unix,mac,dos
 set softtabstop=4 " amout of space when pushed Tab key
 set shiftwidth=4 " amount of space as indentation
 " set cursorline
-" set number " show line numbers
+set number " show line numbers
 " set showmode
 " set showmatch
 set title
