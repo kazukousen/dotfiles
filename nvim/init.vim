@@ -4,12 +4,12 @@ set autoindent
 set smartindent " automatically insert appropriate indentation for each language
 set expandtab " use space instead of tab
 set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,utf-8,ucs-2,cp932,sjis
+set fileencodings=utf-8
+set fileformats=unix,mac,dos
 set softtabstop=4 " amout of space when pushed Tab key
 set shiftwidth=4 " amount of space as indentation
 " set cursorline
-set number " show line numbers
+" set number " show line numbers
 " set showmode
 " set showmatch
 set title
@@ -20,6 +20,8 @@ set hidden
 set nobackup
 set nowritebackup
 set conceallevel=0
+set display=lastline
+set clipboard+=unnamedplus
 
 inoremap <silent> jj <ESC>
 tnoremap <silent> <C-n><C-n> <C-\><C-n>
