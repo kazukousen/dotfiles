@@ -14,7 +14,17 @@ hook_add = '''
 [[plugins]]
 repo = 'joshdick/onedark.vim'
 hook_add = '''
-  colorscheme onedark
+  " colorscheme onedark
+'''
+[[plugins]]
+repo = 'jnurmine/Zenburn'
+hook_add = '''
+  " colorscheme zenburn
+'''
+[[plugins]]
+repo = 'morhetz/gruvbox'
+hook_add = '''
+  colorscheme gruvbox
 '''
 # [[plugins]]
 # repo = 'savq/melange'
