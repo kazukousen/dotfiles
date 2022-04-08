@@ -24,6 +24,7 @@ hook_add = '''
 [[plugins]]
 repo = 'morhetz/gruvbox'
 hook_add = '''
+  let g:gruvbox_contrast_dark = 'soft'
   colorscheme gruvbox
 '''
 # [[plugins]]
