@@ -11,21 +11,27 @@ hook_add = '''
 
 # colorscheme
 # :call dein#recache_runtimepath()
-[[plugins]]
+[[plugins]] # unused
 repo = 'joshdick/onedark.vim'
 hook_add = '''
   " colorscheme onedark
 '''
-[[plugins]]
+[[plugins]] # unused
 repo = 'jnurmine/Zenburn'
 hook_add = '''
   " colorscheme zenburn
 '''
-[[plugins]]
+[[plugins]] # unused
 repo = 'morhetz/gruvbox'
 hook_add = '''
-  let g:gruvbox_contrast_dark = 'soft'
-  colorscheme gruvbox
+  " let g:gruvbox_contrast_dark = 'soft'
+  " colorscheme gruvbox
+'''
+[[plugins]]
+repo = 'sainnhe/gruvbox-material'
+hook_add = '''
+  let g:gruvbox_material_background = 'soft'
+  colorscheme gruvbox-material
 '''
 # [[plugins]]
 # repo = 'savq/melange'
