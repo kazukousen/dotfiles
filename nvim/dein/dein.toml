@@ -101,3 +101,9 @@ hook_add = '''
   nnoremap <silent> <C-w> :bw<CR>
 '''
 
+# complementation
+[[plugins]]
+repo = "neoclide/coc.nvim"
+rev = "release"
+merged = '0'
+
