@@ -101,9 +101,14 @@ hook_add = '''
   nnoremap <silent> <C-w> :bw<CR>
 '''
 
-# complementation
+# completion
 [[plugins]]
 repo = "neoclide/coc.nvim"
 rev = "release"
 merged = '0'
+hook_add = '''
+  let g:coc_global_extensions = [
+  \ 'coc-go'
+  \]
+'''
 
