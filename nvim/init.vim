@@ -57,3 +57,7 @@ endif
 
 "End dein Scripts-------------------------
 
+" If the following mapping are not present, the desired Completion is not be inserted but instead the completion window opened by coc.nvim is closed.
+" See https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#use-cr-to-confirm-completion
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
