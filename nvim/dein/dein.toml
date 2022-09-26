@@ -108,7 +108,8 @@ rev = "release"
 merged = '0'
 hook_add = '''
   let g:coc_global_extensions = [
-  \ 'coc-go'
+  \ 'coc-go',
+  \ 'coc-rust-analyzer'
   \]
 '''
 
