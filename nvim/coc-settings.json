@@ -1,0 +1,15 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "rust",
+  ],
+  "languageserver": {
+    "zig": {
+      "command": "zls",
+      "filetypes": [
+        "zig"
+      ]
+    }
+  }
+}
+
