@@ -107,6 +107,8 @@ hook_add = '''
 '''
 
 # completion
+# https://github.com/neoclide/coc.nvim/wiki/Language-servers
+# https://github.com/hashicorp/terraform-ls/blob/main/docs/installation.md
 [[plugins]]
 repo = "neoclide/coc.nvim"
 rev = "release"
@@ -116,5 +118,12 @@ hook_add = '''
   \ 'coc-go',
   \ 'coc-rust-analyzer'
   \]
+'''
+
+# terraform format on save
+[[plugins]]
+repo = "hashivim/vim-terraform"
+hook_add = '''
+  let g:terraform_fmt_on_save=1
 '''
 

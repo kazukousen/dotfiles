@@ -2,6 +2,7 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "go",
     "rust",
+    "terraform",
   ],
   "languageserver": {
     "zig": {
@@ -9,6 +10,11 @@
       "filetypes": [
         "zig"
       ]
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"]
     }
   }
 }
