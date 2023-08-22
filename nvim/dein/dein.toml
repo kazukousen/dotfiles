@@ -127,3 +127,11 @@ hook_add = '''
   let g:terraform_fmt_on_save=1
 '''
 
+# https://gitlab.com/dbeniamine/todo.txt-vim
+# todo.txt
+[[plugins]]
+repo = "dbeniamine/todo.txt-vim"
+hook_add = '''
+  let g:TodoTxtForceDoneName='archive.txt'
+'''
+
