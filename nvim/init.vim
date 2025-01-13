@@ -22,8 +22,6 @@ set nowritebackup
 set conceallevel=0
 set display=lastline
 set clipboard+=unnamedplus
-set foldmethod=indent
-set foldlevel=8
 
 inoremap <silent> jj <ESC>
 tnoremap <silent> <C-n><C-n> <C-\><C-n>
