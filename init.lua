@@ -5,12 +5,9 @@ end)
 
 -- ctrl hjkl
 
-local function keyCode(key, modifiers)
-   modifiers = modifiers or {}
+local function keyCode(key)
    return function()
-      hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), true):post()
-      hs.timer.usleep(1000)
-      hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), false):post()
+      hs.eventtap.keyStroke({}, key, 0)
    end
 end
 
