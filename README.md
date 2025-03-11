@@ -62,9 +62,7 @@ brew install ripgrep
 ```
 
 ```console
-# install dein runtime
-$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-$ ./installer.sh ./nvim/dein/
+cp nvim/* ~/.config/nvim/
 ```
 
 ## Google Cloud SDK
