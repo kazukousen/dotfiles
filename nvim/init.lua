@@ -65,10 +65,10 @@ require("lazy").setup({
          "lambdalisue/fern.vim",
          config = function()
             vim.api.nvim_set_keymap("n", "<C-n>", ":Fern . -reveal=%<CR>", { noremap = true, silent = true })
-            vim.g.fern_default_hidden = 1
+            vim.g["fern#default_hidden"] = 1
             local hide_dirs = [[^\%(\.git\)$]]
             local hide_files = [[\%(\.DS_Store\)\+]]
-            vim.g.fern_default_exclude = hide_dirs .. "\\|" .. hide_files
+            vim.g["fern#default_exclude"] = hide_dirs .. "\\|" .. hide_files
          end
       },
 
