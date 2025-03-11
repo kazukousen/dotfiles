@@ -122,3 +122,20 @@ require("lazy").setup({
          end
       }
 })
+
+-- ここから VSCode の場合に上書き
+if vim.g.vscode then
+  -- fern の代わりに VSCode の Explorer を開く
+  vim.api.nvim_set_keymap("n", "<C-n>", "<Cmd>call VSCodeNotify('workbench.view.explorer')<CR>", { noremap = true, silent = true })
+
+  -- タブ操作を VSCode に合わせる
+  vim.api.nvim_set_keymap("n", "J", "<Cmd>call VSCodeNotify('workbench.action.previousEditor')<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "K", "<Cmd>call VSCodeNotify('workbench.action.nextEditor')<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<C-w>", "<Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", { noremap = true, silent = true })
+
+  -- fzf の代わりに VSCode の Quick Open を利用
+  vim.api.nvim_set_keymap("n", "<C-f>", "<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>", { noremap = true, silent = true })
+
+  -- coc.nvim を無効化
+  vim.g.coc_global_extensions = {}
+end

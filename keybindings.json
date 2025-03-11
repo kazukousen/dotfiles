@@ -1,0 +1,21 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+n",
+        "command": "vscode-neovim.send",
+        "args": "<C-n>",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "vscode-neovim.send",
+        "args": "<C-w>",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "vscode-neovim.send",
+        "args": "<C-f>",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    }
+]
