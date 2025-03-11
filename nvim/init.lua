@@ -50,10 +50,10 @@ require("lazy").setup({
 
       -- color scheme
       {
-         "sainnhe/everforest",
+         "NLKNguyen/papercolor-theme",
          config = function()
-            vim.g.everforest_background = "soft"
-            vim.cmd("colorscheme everforest")
+            vim.opt.background = "light"
+            vim.cmd("colorscheme PaperColor")
          end
       },
       
