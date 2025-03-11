@@ -26,6 +26,27 @@ set clipboard+=unnamedplus
 inoremap <silent> jj <ESC>
 tnoremap <silent> <C-n><C-n> <C-\><C-n>
 
+"dein Install-----------------------------
+"https://github.com/Shougo/dein.vim?tab=readme-ov-file#basic-installation
+
+let $CACHE = expand('~/.cache')
+if !($CACHE->isdirectory())
+  call mkdir($CACHE, 'p')
+endif
+if &runtimepath !~# '/dein.vim'
+  let s:dir = 'dein.vim'->fnamemodify(':p')
+  if !(s:dir->isdirectory())
+    let s:dir = $CACHE .. '/dein/repos/github.com/Shougo/dein.vim'
+    if !(s:dir->isdirectory())
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dir
+    endif
+  endif
+  execute 'set runtimepath^='
+        \ .. s:dir->fnamemodify(':p')->substitute('[/\\]$', '', '')
+endif
+
+"End deil Install
+
 "dein Scripts-----------------------------
 
 let s:dein_dir = expand('$HOME/go/src/github.com/kazukousen/dotfiles/nvim/dein')
