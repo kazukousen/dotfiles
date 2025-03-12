@@ -1,21 +1,35 @@
 // Place your key bindings in this file to override the defaults
 [
     {
+        "key": "shift+j",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "shift+k",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
         "key": "ctrl+n",
-        "command": "vscode-neovim.send",
-        "args": "<C-n>",
+        "command": "workbench.view.explorer",
         "when": "editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "ctrl+w",
-        "command": "vscode-neovim.send",
-        "args": "<C-w>",
-        "when": "editorTextFocus && neovim.mode == 'normal'"
+        "command": "workbench.action.closeActiveEditor"
     },
     {
         "key": "ctrl+f",
-        "command": "vscode-neovim.send",
-        "args": "<C-f>",
-        "when": "editorTextFocus && neovim.mode == 'normal'"
+        "command": "search.action.openEditor"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.revealDefinition",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.focusActiveEditorGroup"
     }
 ]

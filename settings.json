@@ -2,6 +2,8 @@
     "editor.fontSize": 14,
     "workbench.colorTheme": "Default Light Modern",
     "workbench.editor.enablePreview": false,
+    "search.searchEditor.focusResultsOnSearch": true,
+    "search.searchOnType": false,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
