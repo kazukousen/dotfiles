@@ -51,6 +51,8 @@ require("lazy").setup({
       -- color scheme
       {
          "NLKNguyen/papercolor-theme",
+         cond = (function() return not (vim.g.vscode or false) end),
+
          config = function()
             vim.opt.background = "light"
             vim.cmd("colorscheme PaperColor")
@@ -63,6 +65,8 @@ require("lazy").setup({
       -- ファイラ
       {
          "lambdalisue/fern.vim",
+         cond = (function() return not (vim.g.vscode or false) end),
+
          config = function()
             vim.api.nvim_set_keymap("n", "<C-n>", ":Fern . -reveal=%<CR>", { noremap = true, silent = true })
             vim.g["fern#default_hidden"] = 1
@@ -75,6 +79,8 @@ require("lazy").setup({
       -- fern の git ステータス拡張
       {
          "lambdalisue/fern-git-status.vim",
+         cond = (function() return not (vim.g.vscode or false) end),
+
          dependencies = { "lambdalisue/fern.vim" }
       },
 
@@ -85,6 +91,8 @@ require("lazy").setup({
       },
       {
          "junegunn/fzf.vim",
+         cond = (function() return not (vim.g.vscode or false) end),
+
          dependencies = { "junegunn/fzf" },
          config = function()
             vim.api.nvim_create_user_command("Rg", function(opts)
@@ -98,6 +106,7 @@ require("lazy").setup({
       -- バッファのタブ表示
       {
          "ap/vim-buftabline",
+
          config = function()
             vim.api.nvim_set_keymap("n", "J", ":bprev<CR>", { noremap = true, silent = true })
             vim.api.nvim_set_keymap("n", "K", ":bnext<CR>", { noremap = true, silent = true })
@@ -108,6 +117,8 @@ require("lazy").setup({
       -- coc.nvim
       {
          "neoclide/coc.nvim",
+         cond = (function() return not (vim.g.vscode or false) end),
+
          branch = "release",
          config = function()
             vim.g.coc_global_extensions = { "coc-go", "coc-rust-analyzer" }
@@ -117,6 +128,7 @@ require("lazy").setup({
       -- tffmt
       {
          "hashivim/vim-terraform",
+
          config = function()
             vim.g.terraform_fmt_on_save = 1
          end
@@ -125,17 +137,5 @@ require("lazy").setup({
 
 -- ここから VSCode の場合に上書き
 if vim.g.vscode then
-  -- fern の代わりに VSCode の Explorer を開く
-  vim.api.nvim_set_keymap("n", "<C-n>", "<Cmd>call VSCodeNotify('workbench.view.explorer')<CR>", { noremap = true, silent = true })
-
-  -- タブ操作を VSCode に合わせる
-  vim.api.nvim_set_keymap("n", "J", "<Cmd>call VSCodeNotify('workbench.action.previousEditor')<CR>", { noremap = true, silent = true })
-  vim.api.nvim_set_keymap("n", "K", "<Cmd>call VSCodeNotify('workbench.action.nextEditor')<CR>", { noremap = true, silent = true })
-  vim.api.nvim_set_keymap("n", "<C-w>", "<Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>", { noremap = true, silent = true })
-
-  -- fzf の代わりに VSCode の Quick Open を利用
-  vim.api.nvim_set_keymap("n", "<C-f>", "<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>", { noremap = true, silent = true })
-
-  -- coc.nvim を無効化
   vim.g.coc_global_extensions = {}
 end
