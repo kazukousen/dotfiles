@@ -28,7 +28,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 ```console
 $ brew install tmux
 $ brew install reattach-to-user-namespace
-$ cp _mac_tmux.conf ~/.tmux.conf
+$ cp tmux/_mac_tmux.conf ~/.tmux.conf
 ```
 
 ## Hammerspoon
@@ -36,20 +36,27 @@ $ cp _mac_tmux.conf ~/.tmux.conf
 Download https://www.hammerspoon.org
 
 ```console
-$ cp init.lua ~/.hammerspoon/init.lua
+$ cp hammerspoon/init.lua ~/.hammerspoon/init.lua
 ```
 
 ## VSCode
 
 ```console
 $ mkdir -p ~/Library/Application\ Support/Code/User/
-$ cp setting.json ~/Library/Application\ Support/Code/User/settings.json
+$ cp vscode/* ~/Library/Application\ Support/Code/User/
 ```
 
-## tig
+## Git
 
 ```console
+$ brew install gh
 $ brew install tig
+$ gh auth login
+$ git config --global user.name kazukousen
+$ git config --global user.email mmchari.0228@gmail.com
+$ git config --global alias.ch checkout
+$ git config --global alias.po "push origin"
+$ git config --global alias.br "branch --sort=committerdate"
 ```
 
 ## Vim
@@ -73,10 +80,4 @@ $ cd ~
 $ ./google-cloud-sdk/install.sh
 $ source ~/.bash_profile
 $ gcloud init
-```
-
-## Goland And Intellij IDEA
-
-```console
-$ cp .ideavimrc ~/.ideavimrc
 ```
