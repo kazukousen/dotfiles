@@ -1,5 +1,6 @@
 {
     "editor.fontSize": 14,
+    "editor.formatOnSave": true,
     "workbench.colorTheme": "Default Light Modern",
     "workbench.editor.enablePreview": false,
     "search.searchEditor.focusResultsOnSearch": true,

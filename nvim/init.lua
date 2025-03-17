@@ -122,6 +122,7 @@ require("lazy").setup({
          branch = "release",
          config = function()
             vim.g.coc_global_extensions = { "coc-go", "coc-rust-analyzer" }
+            vim.api.nvim_set_keymap("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<CR>'", { expr = true, noremap = true, silent = true })
          end
       },
 
