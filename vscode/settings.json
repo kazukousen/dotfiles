@@ -13,5 +13,6 @@
         "jj": {
             "command": "vscode-neovim.escape"
         }
-    }
+    },
+    "find-it-faster.general.useTerminalInEditor": true
 }

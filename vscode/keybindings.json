@@ -19,9 +19,15 @@
         "key": "ctrl+w",
         "command": "workbench.action.closeActiveEditor"
     },
+    // terminalInEditor を ctrl+w で閉じるため (findItFaster など)
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+    },
     {
         "key": "ctrl+f",
-        "command": "search.action.openEditor"
+        "command": "find-it-faster.findWithinFiles"
     },
     {
         "key": "ctrl+enter",
