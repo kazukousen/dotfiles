@@ -47,9 +47,5 @@
         "key": "cmd+1",
         "command": "workbench.action.quickOpenSelectNext",
         "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+a ctrl+a",
-        "command": "cline.openInNewTab"
     }
 ]
