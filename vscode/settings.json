@@ -14,5 +14,11 @@
             "command": "vscode-neovim.escape"
         }
     },
-    "find-it-faster.general.useTerminalInEditor": true
+    "find-it-faster.general.useTerminalInEditor": true,
+    "find-it-faster.general.killTerminalAfterUse": true,
+    "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.quickOpen",
+        "-workbench.action.quickOpenView"
+    ]
 }
