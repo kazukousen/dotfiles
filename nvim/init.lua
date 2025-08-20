@@ -99,7 +99,12 @@ require("lazy").setup({
                vim.fn["fzf#vim#grep"]("rg --line-number --no-heading " .. vim.fn.shellescape(opts.args), 0,
                   vim.fn["fzf#vim#with_preview"]({ options = "--exact --reverse" }, "right:50%:wrap"))
             end, { nargs = "*" })
+            vim.api.nvim_create_user_command("RgNoFilename", function(opts)
+               vim.fn["fzf#vim#grep"]("rg --line-number --no-heading " .. vim.fn.shellescape(opts.args), 0,
+                  vim.fn["fzf#vim#with_preview"]({ options = "--exact --reverse --delimiter : --with-nth 2.." }, "right:50%:wrap"))
+            end, { nargs = "*" })
          vim.api.nvim_set_keymap("n", "<C-f>", ":Rg<CR>", { noremap = true, silent = true })
+         vim.api.nvim_set_keymap("n", "<C-p>", ":RgNoFilename<CR>", { noremap = true, silent = true })
          end
       },
 
@@ -121,7 +126,7 @@ require("lazy").setup({
 
          branch = "release",
          config = function()
-            vim.g.coc_global_extensions = { "coc-go", "coc-rust-analyzer" }
+            vim.g.coc_global_extensions = { "coc-go", "coc-rust-analyzer", "coc-python" }
             vim.api.nvim_set_keymap("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<CR>'", { expr = true, noremap = true, silent = true })
          end
       },
