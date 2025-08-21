@@ -95,15 +95,34 @@ require("lazy").setup({
 
          dependencies = { "junegunn/fzf" },
          config = function()
+            -- 検索除外
+            local rg_excludes = {
+               ".git/",
+               ".DS_Store",
+               "node_modules/",
+               "*.swp",
+               "*.pyc",
+               "__pycache__/",
+            }
+            local rg_opts = "--hidden"
+            for _, pattern in ipairs(rg_excludes) do
+               rg_opts = rg_opts .. " --glob '!" .. pattern .. "'"
+            end
+            
+            -- Rg
             vim.api.nvim_create_user_command("Rg", function(opts)
-               vim.fn["fzf#vim#grep"]("rg --line-number --no-heading " .. vim.fn.shellescape(opts.args), 0,
+               vim.fn["fzf#vim#grep"]("rg " .. rg_opts .. " --line-number --no-heading " .. vim.fn.shellescape(opts.args), 0,
                   vim.fn["fzf#vim#with_preview"]({ options = "--exact --reverse" }, "right:50%:wrap"))
             end, { nargs = "*" })
+            -- RgNoFilename
             vim.api.nvim_create_user_command("RgNoFilename", function(opts)
-               vim.fn["fzf#vim#grep"]("rg --line-number --no-heading " .. vim.fn.shellescape(opts.args), 0,
-                  vim.fn["fzf#vim#with_preview"]({ options = "--exact --reverse --delimiter : --with-nth 2.." }, "right:50%:wrap"))
+               vim.fn["fzf#vim#grep"]("rg " .. rg_opts .. " --line-number --no-heading " .. vim.fn.shellescape(opts.args), 0,
+                  vim.fn["fzf#vim#with_preview"]({ options = "--exact --reverse --delimiter : --nth 2.." }, "right:50%:wrap"))
             end, { nargs = "*" })
+
+         -- Rg
          vim.api.nvim_set_keymap("n", "<C-f>", ":Rg<CR>", { noremap = true, silent = true })
+         -- RgNoFilename
          vim.api.nvim_set_keymap("n", "<C-p>", ":RgNoFilename<CR>", { noremap = true, silent = true })
          end
       },
