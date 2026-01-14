@@ -27,6 +27,10 @@ vim.opt.clipboard:append("unnamedplus")
 -- Key mappings
 vim.g.mapleader = " "
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
+-- 左の画面へ
+vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", { noremap = true, silent = true })
+-- 右の画面へ
+vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
 
 -- lazy.nvim のパスを設定
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -136,6 +140,7 @@ require("lazy").setup({
             })
             vim.api.nvim_set_keymap("n", "J", ":bprev<CR>", { noremap = true, silent = true })
             vim.api.nvim_set_keymap("n", "K", ":bnext<CR>", { noremap = true, silent = true })
+            vim.api.nvim_set_keymap("n", "<C-w>", ":bw<CR>", { noremap = true, silent = true })
          end
       },
 
